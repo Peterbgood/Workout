@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Workout Routine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(180deg, #007bff, #0056b3);
+            color: white;
+            padding: 40px 15px;
+            text-align: center;
+        }
+        .hero-section i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .schedule-table th, .schedule-table td {
+            text-align: center;
+            vertical-align: middle;
+            font-size: 0.9rem;
+        }
+        .exercise-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .exercise-list li {
+            background: #e9ecef;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+        }
+        .exercise-list i {
+            margin-right: 8px;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+        }
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 30px 10px;
+            }
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            .hero-section p {
+                font-size: 0.9rem;
+            }
+            .schedule-table th, .schedule-table td {
+                font-size: 0.8rem;
+                padding: 8px;
+            }
+            .exercise-list li {
+                font-size: 0.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <i class="fa-solid fa-person-running"></i>
+        <h1>My Weekly Workout Routine</h1>
+        <p>Running 5x a Week (10 AM) | Weight Training 4x a Week (7 PM) | 30-45 Min Sessions</p>
+    </div>
+
+    <!-- Weekly Schedule -->
+    <div class="container my-4">
+        <h2 class="text-center mb-4"><i class="fa-solid fa-calendar me-2"></i>Weekly Schedule</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered schedule-table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Day</th>
+                        <th>Activity</th>
+                        <th>Time</th>
+                        <th>Duration</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td><i class="fa-solid fa-person-running me-1"></i>Run + Chest/Triceps</td>
+                        <td>10 AM / 7 PM</td>
+                        <td>30 min / 45 min</td>
+                        <td>5k Run + Dumbbell Workout (Chest & Triceps)</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td><i class="fa-solid fa-person-running me-1"></i>Run + Biceps/Shoulders/Core</td>
+                        <td>10 AM / 7 PM</td>
+                        <td>30 min / 45 min</td>
+                        <td>5k Run + Dumbbell & Core Workout</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td><i class="fa-solid fa-person-running me-1"></i>Run + Chest/Triceps</td>
+                        <td>10 AM / 7 PM</td>
+                        <td>30 min / 45 min</td>
+                        <td>5k Run + Dumbbell Workout (Chest & Triceps)</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td><i class="fa-solid fa-person-running me-1"></i>Run + Biceps/Shoulders/Core</td>
+                        <td>10 AM / 7 PM</td>
+                        <td>30 min / 45 min</td>
+                        <td>5k Run + Dumbbell & Core Workout</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td><i class="fa-solid fa-person-running me-1"></i>Run</td>
+                        <td>10 AM</td>
+                        <td>30 min</td>
+                        <td>5k Run</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td><i class="fa-solid fa-moon me-1"></i>Rest</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Rest or light walk</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td><i class="fa-solid fa-moon me-1"></i>Rest</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Rest or light walk</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Exercise Details -->
+    <div class="container my-4">
+        <h2 class="text-center mb-4"><i class="fa-solid fa-dumbbell me-2"></i>Exercise Details</h2>
+        <div class="row g-3">
+            <div class="col-12 col-md-4">
+                <h3><i class="fa-solid fa-heart-pulse me-2"></i>Chest & Triceps (Mon/Wed)</h3>
+                <ul class="exercise-list">
+                    <li><i class="fa-solid fa-dumbbell me-1"></i>Dumbbell Chest Press (15 lb): 3 sets of 12</li>
+                    <li><i class="fa-solid fa-dumbbell me-1"></i>Dumbbell Flys (5 lb): 3 sets of 12</li>
+                    <li><i class="fa-solid fa-dumbbell me-1"></i>Overhead Tricep Extension (15 lb): 3 sets of 12</li>
+                    <li><i class="fa-solid fa-person me-1"></i>Push-ups: 3 sets to failure</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4">
+                <h3><i class="fa-solid fa-bullseye me-2"></i>Biceps & Shoulders (Tue/Thu)</h3>
+                <ul class="exercise-list">
+                    <li><i class="fa-solid fa-dumbbell me-1"></i>Bicep Curls (15 lb): 3 sets of 12</li>
+                    <li><i class="fa-solid fa-dumbbell me-1"></i>Hammer Curls (15 lb): 3 sets of 12</li>
+                    <li><i class="fa-solid fa-dumbbell me-1"></i>Lateral Raises (5 lb): 3 sets of 12</li>
+                    <li><i class="fa-solid fa-dumbbell me-1"></i>Front Raises (5 lb): 3 sets of 12</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4">
+                <h3><i class="fa-solid fa-cube me-2"></i>Core (Tue/Thu)</h3>
+                <ul class="exercise-list">
+                    <li><i class="fa-solid fa-person me-1"></i>Planks: 3 sets of 30-60 sec</li>
+                    <li><i class="fa-solid fa-arrow-up me-1"></i>Leg Raises: 3 sets of 12</li>
+                    <li><i class="fa-solid fa-arrows-left-right me-1"></i>Russian Twists: 3 sets of 20 (10/side)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
