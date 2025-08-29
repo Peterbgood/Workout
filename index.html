@@ -46,6 +46,14 @@
         h3 {
             font-size: 1.2rem;
         }
+        .collapsible-row {
+            cursor: pointer;
+        }
+        .collapsible-content {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 0 0 5px 5px;
+        }
         @media (max-width: 576px) {
             .hero-section {
                 padding: 30px 10px;
@@ -69,6 +77,25 @@
             h3 {
                 font-size: 1.1rem;
             }
+            .table-desktop {
+                display: none;
+            }
+            .collapsible-row {
+                font-size: 0.9rem;
+                padding: 10px;
+                background: #e9ecef;
+                margin-bottom: 5px;
+                border-radius: 5px;
+            }
+            .collapsible-content {
+                padding: 10px;
+                font-size: 0.85rem;
+            }
+        }
+        @media (min-width: 577px) {
+            .collapsible-mobile {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -83,7 +110,9 @@
     <!-- Weekly Schedule -->
     <div class="container my-4">
         <h2 class="text-center mb-4"><i class="fa-solid fa-calendar me-2"></i>Weekly Schedule</h2>
-        <div class="table-responsive">
+
+        <!-- Desktop Table -->
+        <div class="table-responsive table-desktop">
             <table class="table table-bordered schedule-table">
                 <thead class="table-dark">
                     <tr>
@@ -107,7 +136,7 @@
                         <td><i class="fa-solid fa-person-running me-1"></i>Run + Biceps/Shoulders/Core</td>
                         <td>10 AM / 7 PM</td>
                         <td>30 min / 45 min</td>
-                        <td>5k Run + Dumbbell & Core Workout</td>
+                        <td>5k Run + Dumbbell & Core Workout (incl. Squats)</td>
                     </tr>
                     <tr>
                         <td>Wednesday</td>
@@ -121,7 +150,7 @@
                         <td><i class="fa-solid fa-person-running me-1"></i>Run + Biceps/Shoulders/Core</td>
                         <td>10 AM / 7 PM</td>
                         <td>30 min / 45 min</td>
-                        <td>5k Run + Dumbbell & Core Workout</td>
+                        <td>5k Run + Dumbbell & Core Workout (incl. Squats)</td>
                     </tr>
                     <tr>
                         <td>Friday</td>
@@ -146,6 +175,73 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <!-- Mobile Collapsible -->
+        <div class="collapsible-mobile">
+            <div class="collapsible-row" data-bs-toggle="collapse" data-bs-target="#mondayDetails">
+                <i class="fa-solid fa-person-running me-1"></i>Monday
+            </div>
+            <div class="collapse collapsible-content" id="mondayDetails">
+                <p><strong>Activity:</strong> Run + Chest/Triceps</p>
+                <p><strong>Time:</strong> 10 AM / 7 PM</p>
+                <p><strong>Duration:</strong> 30 min / 45 min</p>
+                <p><strong>Details:</strong> 5k Run + Dumbbell Workout (Chest & Triceps)</p>
+            </div>
+            <div class="collapsible-row" data-bs-toggle="collapse" data-bs-target="#tuesdayDetails">
+                <i class="fa-solid fa-person-running me-1"></i>Tuesday
+            </div>
+            <div class="collapse collapsible-content" id="tuesdayDetails">
+                <p><strong>Activity:</strong> Run + Biceps/Shoulders/Core</p>
+                <p><strong>Time:</strong> 10 AM / 7 PM</p>
+                <p><strong>Duration:</strong> 30 min / 45 min</p>
+                <p><strong>Details:</strong> 5k Run + Dumbbell & Core Workout (incl. Squats)</p>
+            </div>
+            <div class="collapsible-row" data-bs-toggle="collapse" data-bs-target="#wednesdayDetails">
+                <i class="fa-solid fa-person-running me-1"></i>Wednesday
+            </div>
+            <div class="collapse collapsible-content" id="wednesdayDetails">
+                <p><strong>Activity:</strong> Run + Chest/Triceps</p>
+                <p><strong>Time:</strong> 10 AM / 7 PM</p>
+                <p><strong>Duration:</strong> 30 min / 45 min</p>
+                <p><strong>Details:</strong> 5k Run + Dumbbell Workout (Chest & Triceps)</p>
+            </div>
+            <div class="collapsible-row" data-bs-toggle="collapse" data-bs-target="#thursdayDetails">
+                <i class="fa-solid fa-person-running me-1"></i>Thursday
+            </div>
+            <div class="collapse collapsible-content" id="thursdayDetails">
+                <p><strong>Activity:</strong> Run + Biceps/Shoulders/Core</p>
+                <p><strong>Time:</strong> 10 AM / 7 PM</p>
+                <p><strong>Duration:</strong> 30 min / 45 min</p>
+                <p><strong>Details:</strong> 5k Run + Dumbbell & Core Workout (incl. Squats)</p>
+            </div>
+            <div class="collapsible-row" data-bs-toggle="collapse" data-bs-target="#fridayDetails">
+                <i class="fa-solid fa-person-running me-1"></i>Friday
+            </div>
+            <div class="collapse collapsible-content" id="fridayDetails">
+                <p><strong>Activity:</strong> Run</p>
+                <p><strong>Time:</strong> 10 AM</p>
+                <p><strong>Duration:</strong> 30 min</p>
+                <p><strong>Details:</strong> 5k Run</p>
+            </div>
+            <div class="collapsible-row" data-bs-toggle="collapse" data-bs-target="#saturdayDetails">
+                <i class="fa-solid fa-moon me-1"></i>Saturday
+            </div>
+            <div class="collapse collapsible-content" id="saturdayDetails">
+                <p><strong>Activity:</strong> Rest</p>
+                <p><strong>Time:</strong> -</p>
+                <p><strong>Duration:</strong> -</p>
+                <p><strong>Details:</strong> Rest or light walk</p>
+            </div>
+            <div class="collapsible-row" data-bs-toggle="collapse" data-bs-target="#sundayDetails">
+                <i class="fa-solid fa-moon me-1"></i>Sunday
+            </div>
+            <div class="collapse collapsible-content" id="sundayDetails">
+                <p><strong>Activity:</strong> Rest</p>
+                <p><strong>Time:</strong> -</p>
+                <p><strong>Duration:</strong> -</p>
+                <p><strong>Details:</strong> Rest or light walk</p>
+            </div>
         </div>
     </div>
 
@@ -174,6 +270,7 @@
             <div class="col-12 col-md-4">
                 <h3><i class="fa-solid fa-cube me-2"></i>Core (Tue/Thu)</h3>
                 <ul class="exercise-list">
+                    <li><i class="fa-solid fa-dumbbell me-1"></i>Dumbbell Squats (15 lb): 3 sets of 12</li>
                     <li><i class="fa-solid fa-person me-1"></i>Planks: 3 sets of 30-60 sec</li>
                     <li><i class="fa-solid fa-arrow-up me-1"></i>Leg Raises: 3 sets of 12</li>
                     <li><i class="fa-solid fa-arrows-left-right me-1"></i>Russian Twists: 3 sets of 20 (10/side)</li>
